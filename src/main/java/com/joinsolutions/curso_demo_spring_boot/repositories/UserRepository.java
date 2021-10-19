@@ -5,8 +5,7 @@ import com.joinsolutions.curso_demo_spring_boot.entities.User;
 
 
 
-public interface UserRepository extends JpaRepository<User, Long> {
-	
+public interface UserRepository extends JpaRepository<User, Long> {	
 
 
 }
