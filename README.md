@@ -30,7 +30,7 @@ São necessários os seguintes pré-requisitos para a execução do projeto dese
 Abaixo, seguem links bem bacanas, sobre tópicos mencionados:
 
 
-* [Site oficial do Eclispe](https://www.eclipse.org/)
+* [Site oficial do Eclipse](https://www.eclipse.org/)
 * [Site oficial do Spring](https://spring.io/)
 * [Site oficial do GitHub](http://github.com/)
 * [Site oficial do Hiroku](https://www.heroku.com/)
