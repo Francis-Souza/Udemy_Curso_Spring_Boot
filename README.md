@@ -1,8 +1,15 @@
 # Udemy Curso Spring Boot
 
-<h2> Projeto Web com Spring Boot e JPA / Hibernate </h2>
+<h2> PROJETO WEB COM SPRING BOOT, JPA E HIBERNATE </h2>
+
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+
+
+<h2>DESCRIÇÃO DO PROJETO</h2>
 
 Desenvolvimento de um Pequeno Sistema utilizando Spring Boot com Hibernate e JPA.
+
+
 
 Durante a sessão, serão desenvolvidos e abordados os seguintes tópicos:
 
