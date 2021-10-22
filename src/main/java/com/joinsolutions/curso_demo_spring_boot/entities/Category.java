@@ -30,7 +30,8 @@ public class Category  implements Serializable {
 	private String name;
 	
 	
-	@ManyToMany
+	/*====Associação de Chave Estrangeira M p/ M ===*/
+	@ManyToMany(mappedBy = "categories")
 	@JsonIgnore
 	private Set<Product> products = new HashSet<>();
 	
