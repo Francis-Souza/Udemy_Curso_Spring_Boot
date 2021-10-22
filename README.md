@@ -1,6 +1,6 @@
 # Udemy Curso Spring Boot
 
-<h2> PROJETO WEB COM SPRING BOOT, JPA E HIBERNATE </h2>
+<h2> PROJETO WEB SERVICES COM SPRING BOOT, JPA E HIBERNATE </h2>
 
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 
