@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.joinsolutions.curso_demo_spring_boot.entities.User;
 import com.joinsolutions.curso_demo_spring_boot.repositories.UserRepository;
 
@@ -24,17 +23,30 @@ public class UserService {
 		return obj.get();
 	}
 
-	public User insert(User obj) {		
-		return userRepository.save(obj);		
+	public User insert(User obj) {
+		return userRepository.save(obj);
 	}
-	
-	 public void deleteById (Long id) {		
-		userRepository.deleteById(id);;		
+
+	public void deleteById(Long id) {
+		userRepository.deleteById(id);
+		;
 	}
-	
-	/*
-	public void update(User obj) {
-		obj.setEmail(obj.getEmail());		
+
+	@SuppressWarnings("deprecation")
+	public User update(Long id, User obj) {
+
+		/* getOne não vai no BD e somente prepara a entidade - melhor que o findById */		
+		User entity = userRepository.getOne(id);
+
+		updateData(entity, obj);
+		return userRepository.save(entity);
 	}
-	*/
+
+	private void updateData(User entity, User obj) {
+
+		entity.setName(obj.getName());
+		entity.setEmail(obj.getEmail());
+		entity.setPhone(obj.getPhone());
+	}
+
 }
