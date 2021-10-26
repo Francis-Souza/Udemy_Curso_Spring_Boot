@@ -33,8 +33,8 @@ public class UserService {
 	}
 	
 	/*
-	public User update (Long id) {
-		
-	}*/
-	
+	public void update(User obj) {
+		obj.setEmail(obj.getEmail());		
+	}
+	*/
 }
