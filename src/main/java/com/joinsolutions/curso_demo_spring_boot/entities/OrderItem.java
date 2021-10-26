@@ -7,6 +7,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.joinsolutions.curso_demo_spring_boot.entities.pk.OrderItemPK;
 
 
@@ -17,7 +18,7 @@ public class OrderItem implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@EmbeddedId
-	private OrderItemPK id;
+	private OrderItemPK id = new OrderItemPK();
 	
 	@Column(nullable = false)
 	private Integer quantity;
@@ -40,6 +41,7 @@ public class OrderItem implements Serializable {
 
 	
 	/*Getter e Setter inseridos manualmente  tabela de detalhe( ligação Order e OrderItem)*/
+	@JsonIgnore
 	public Order getOrder() {
 		return id.getOrder();
 	}
