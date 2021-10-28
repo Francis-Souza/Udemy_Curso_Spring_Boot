@@ -43,11 +43,12 @@ public class UserService {
 		}
 	}
 
-	@SuppressWarnings("deprecation")
+//	@SuppressWarnings("deprecation")
 	public User update(Long id, User obj) {
 		try {
 		/* getOne não vai no BD e somente prepara a entidade - melhor que o findById */		
-		User entity = userRepository.getOne(id);
+		//User entity = userRepository.getOne(id);
+		User entity = findById(id);
 		updateData(entity, obj);
 		return userRepository.save(entity);
 		} catch (EntityNotFoundException e ) {

@@ -57,7 +57,6 @@ public class UserResource {
 	}
 
 	@PutMapping(value = "/{id}")
-
 	public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User obj) {
 		obj = userService.update(id, obj);
 		URI uri = ServletUriComponentsBuilder
