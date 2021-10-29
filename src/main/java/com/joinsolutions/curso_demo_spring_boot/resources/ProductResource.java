@@ -20,7 +20,7 @@ import com.joinsolutions.curso_demo_spring_boot.services.ProductService;
 
 
 @RestController
-@RequestMapping(name = "/products")
+@RequestMapping("/products")
 public class ProductResource {
 	
 	@Autowired

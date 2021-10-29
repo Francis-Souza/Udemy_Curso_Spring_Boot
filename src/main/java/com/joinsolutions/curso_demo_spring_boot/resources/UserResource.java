@@ -19,7 +19,7 @@ import com.joinsolutions.curso_demo_spring_boot.entities.User;
 import com.joinsolutions.curso_demo_spring_boot.services.UserService;
 
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping("/users")
 public class UserResource {
 
 	@Autowired

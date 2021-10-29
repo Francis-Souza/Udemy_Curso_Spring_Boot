@@ -19,7 +19,7 @@ import com.joinsolutions.curso_demo_spring_boot.entities.Order;
 import com.joinsolutions.curso_demo_spring_boot.services.OrderService;
 
 @RestController
-@RequestMapping(value = "/orders")
+@RequestMapping("/orders")
 public class OrderResource {
 
 	@Autowired
