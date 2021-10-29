@@ -22,12 +22,12 @@ public class UserService {
 
 	public List<User> findAll() {
 		return userRepository.findAll();
-	}		
+	}
 
 	public User findById(Long id) {
 		Optional<User> obj = userRepository.findById(id);
-		return obj.orElseThrow(()-> new ResourceNotFoundException(id));
-}
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
+	}
 
 	public User insert(User obj) {
 		return userRepository.save(obj);
@@ -46,13 +46,13 @@ public class UserService {
 //	@SuppressWarnings("deprecation")
 	public User update(Long id, User obj) {
 		try {
-		/* getOne não vai no BD e somente prepara a entidade - melhor que o findById */		
-		//User entity = userRepository.getOne(id);
-		User entity = findById(id);
-		updateData(entity, obj);
-		return userRepository.save(entity);
-		} catch (EntityNotFoundException e ) {
-			throw new ResourceNotFoundException(id);			
+			/* getOne não vai no BD e somente prepara a entidade - melhor que o findById */
+			// User entity = userRepository.getOne(id);
+			User entity = findById(id);
+			updateData(entity, obj);
+			return userRepository.save(entity);
+		} catch (EntityNotFoundException e) {
+			throw new ResourceNotFoundException(id);
 		}
 	}
 
