@@ -41,7 +41,7 @@ public class OrderItem implements Serializable {
 	}
 
 	
-	/*Getter e Setter inseridos manualmente  tabela de detalhe( ligação Order e OrderItem)*/
+	/*Getter e Setter inseridos manualmente tabela de detalhe( ligação Order e OrderItem)*/
 	@JsonIgnore
 	public Order getOrder() {
 		return id.getOrder();

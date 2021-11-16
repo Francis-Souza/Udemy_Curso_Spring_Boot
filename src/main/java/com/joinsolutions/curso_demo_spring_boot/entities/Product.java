@@ -41,11 +41,12 @@ public class Product implements Serializable {
 	private String imgUrl;
 	
 	/*====Associação de Chave Estrangeira M p/ M ===
-	 tabela deve conter as duas chaves ( Product e Category )====*/
+	Tabela deve conter as duas chaves ( Product e Category )====*/
 	@ManyToMany
 	@JoinTable(name = "tb_product_category", joinColumns = @JoinColumn(name = "product_id"), inverseJoinColumns = @JoinColumn(name = "category_id"))
 	private Set<Category> categories = new HashSet<>();
 	
+	/*Associação com tabela OrderItem*/
 	@OneToMany(mappedBy = "id.product")
 	private Set<OrderItem> items = new HashSet<>();
 	
